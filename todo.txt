@@ -1,0 +1,3 @@
+1. Install Hapi.js
+2. Install a model/db connector
+3. Start creating app
