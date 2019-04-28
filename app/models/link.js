@@ -9,6 +9,14 @@ class Link {
   static test() {
     return 'test of link class'
   }
+
+  static get(linkId) {
+    return knex.from('link').select().then(
+      (rows) => {
+        return rows;
+      }
+    );
+  }
 }
 
 export default Link;
