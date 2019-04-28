@@ -19,6 +19,10 @@ We also have the ability to create migration files that help us keep our databas
 
 ## 2019/04/28
 
-- Look into why i can't run any queries
-- Get a response for my query returning
-- Get app to build with every change
+- ~~Look into why i can't run any queries~~
+  - turns out I was able to run queries, but I wasn't correctly waiting for their result
+- ~~Get a response for my query returning~~
+  - solved - just need to async wait for response
+- ~~Get app to build with every change~~
+  - solved - just needed to use a different node server package (babel-watch: which can run babel code out of the box)
+- Figure out how to get async functions working, as currently they are throwing the following error: `ReferenceError: regeneratorRuntime is not defined`
