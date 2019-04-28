@@ -16,3 +16,9 @@ But also, they define:
 
 We also have the ability to create migration files that help us keep our database up to date
 - Use these to define associations, update_updated, date_created
+
+## 2019/04/28
+
+- Look into why i can't run any queries
+- Get a response for my query returning
+- Get app to build with every change
