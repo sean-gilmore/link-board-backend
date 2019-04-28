@@ -7,5 +7,17 @@
     "express": "^4.16.4",
     "knex": "^0.16.5",
     "mysql": "^2.17.1"
+  },
+  "scripts": {
+    "build": "babel app -d dist",
+    "start": "yarn run build && nodemon --watch app dist/index.js",
+    "serve": "yarn run build && node dist/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "nodemon": "^1.18.11"
   }
 }
