@@ -4,14 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "npm run prod",
+    "prod-start": "npm run prod",
     "server": "babel-node ./app",
     "server:prod": "node ./dist",
     "dev": "NODE_ENV=development npm-run-all server",
     "clean": "rimraf dist",
     "build": "babel ./app --out-dir dist",
     "prod": "NODE_ENV=production npm-run-all clean build server:prod",
-    "watch": "nodemon"
+    "start": "nodemon"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -27,6 +27,8 @@
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
+    "@babel/preset-flow": "^7.0.0",
+    "flow-bin": "^0.100.0",
     "nodemon": "^1.18.9"
   }
 }
