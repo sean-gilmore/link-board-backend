@@ -1,4 +1,4 @@
-import Link from './models/link.js';
+import LinkController from './controllers/LinkController.js';
 import express from 'express';
 import bodyParser from 'body-parser';
 const app = express();
@@ -11,18 +11,17 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 // Links
 
-app.get('/v1/links', async (req, res) => {
-  const result = await Link.all();
-  res.json(result)
+app.get('/links', (req, res) => {
+  res.json(LinkController.index());
 })
 
-app.post('/v1/links/create', async (req, res) => {
+app.post('/links/create', async (req, res) => {
   console.log(req.body);
   const result = await Link.create(req.body);
   res.json(result);
 })
 
-app.get('/v1/links/:id', async (req, res) => {
+app.get('/links/:id', async (req, res) => {
   const result= await Link.get(req.params.id);
   res.json(result);
 })
