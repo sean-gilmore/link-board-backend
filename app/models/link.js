@@ -6,7 +6,6 @@ class Link {
   static async all(): Array<LinkType> {
     const all = await knex.from('link').select().then(
       (rows) => {
-        console.log(rows);
         return rows;
       }
     );
