@@ -1,23 +1,26 @@
 // @flow
 import Link from '../models/Link';
+import { Link as LinkType } from '../types';
+
 
 class LinkController {
-  static async index() {
-    return await Link.all();
+  static index(): Array<LinkType> {
+    return Link.all();
   }
 
-  static async get(linkId: number) {
+  static show(linkId: number): LinkType {
+    return Link.get(linkId);
   }
 
-  static async create() {
+  static create(newLink): LinkType {
+    return Link.create(newLink);
+  }
+
+  static update() {
 
   }
 
-  static async update() {
-
-  }
-
-  static async destroy() {
+  static destroy() {
     
   }
 }
