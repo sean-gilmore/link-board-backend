@@ -11,7 +11,8 @@
     "clean": "rimraf dist",
     "build": "babel ./app --out-dir dist",
     "prod": "NODE_ENV=production npm-run-all clean build server:prod",
-    "start": "nodemon"
+    "start": "nodemon",
+    "validate": "eslint"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -28,6 +29,8 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
     "flow-bin": "^0.100.0",
     "nodemon": "^1.18.9"
   }
