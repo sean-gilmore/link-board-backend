@@ -11,18 +11,19 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 // Links
 
-app.get('/links', (req, res) => {
-  res.json(LinkController.index());
-})
-
-app.post('/links/create', async (req, res) => {
-  console.log(req.body);
-  const result = await Link.create(req.body);
+app.get('/links', async (req, res) => {
+  const result = await LinkController.index();
   res.json(result);
 })
 
-app.get('/links/:id', async (req, res) => {
-  const result= await Link.get(req.params.id);
+app.post('/links/create', async (req, res) => {
+  const result = await LinkController.create(req.body);
+  res.json(result);
+})
+
+app.get('/links/:id', (req, res) => {
+  const result = LinkController.show(req.params.id);
+  console.log('result', result);
   res.json(result);
 })
 
