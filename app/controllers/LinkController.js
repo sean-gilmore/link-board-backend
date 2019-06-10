@@ -20,8 +20,8 @@ class LinkController {
 
   }
 
-  static destroy() {
-    
+  static delete(linkId: number) {
+    return Link.remove(linkId);
   }
 }
 

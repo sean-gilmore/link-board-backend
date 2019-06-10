@@ -21,9 +21,13 @@ app.post('/links/create', async (req, res) => {
   res.json(result);
 })
 
-app.get('/links/:id', (req, res) => {
-  const result = LinkController.show(req.params.id);
-  console.log('result', result);
+app.get('/links/:id', async (req, res) => {
+  const result = await LinkController.show(req.params.id);
+  res.json(result);
+})
+
+app.delete('/links/:id', async (req, res) => {
+  const result = await LinkController.delete(req.params.id);
   res.json(result);
 })
 
