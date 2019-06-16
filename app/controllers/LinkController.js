@@ -16,8 +16,8 @@ class LinkController {
     return Link.create(newLink);
   }
 
-  static update() {
-
+  static update(linkId: number, link: LinkType): LinkType {
+    return Link.update(linkId, link);
   }
 
   static delete(linkId: number) {

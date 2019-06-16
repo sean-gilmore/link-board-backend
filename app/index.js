@@ -31,5 +31,10 @@ app.delete('/links/:id', async (req, res) => {
   res.json(result);
 })
 
+app.put('/links/:id', async (req, res) => {
+  const result = await LinkController.update(req.params.id, req.body);
+  res.json(result);
+})
+
 // App start
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

@@ -27,7 +27,13 @@ class Link {
 
   static async delete(linkId: number) {
     await knex.from('link').where('id', linkId).del();
-    return `Removed link ${linkId}`
+    return `Removed link ${linkId}`;
+  }
+
+  static async update(linkId: Number, link: LinkType): LinkType {
+    await knex('link').where({ id: linkId }).update(link);
+    const newLink = await this.get(linkId);
+    return newLink;
   }
 }
 
