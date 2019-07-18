@@ -12,7 +12,8 @@
     "build": "babel ./app --out-dir dist",
     "prod": "NODE_ENV=production npm-run-all clean build server:prod",
     "start": "nodemon",
-    "validate": "eslint"
+    "validate": "eslint",
+    "test": "mocha"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
