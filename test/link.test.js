@@ -1,4 +1,3 @@
-// @flow
 import Link from '../app/models/Link';
 
 describe('Link', function() {
