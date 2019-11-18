@@ -12,8 +12,8 @@
     "build": "babel ./app --out-dir dist",
     "prod": "NODE_ENV=production npm-run-all clean build server:prod",
     "start": "nodemon",
-    "validate": "eslint",
-    "test": "NODE_ENV=test mocha --require @babel/register --require  @babel/polyfill --exit"
+    "validate": "eslint app && flow",
+    "test": "NODE_ENV=test mocha 'app/**/*.test.js' --require @babel/register --require  @babel/polyfill --exit"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -33,6 +33,7 @@
     "@babel/preset-flow": "^7.0.0",
     "@babel/register": "^7.5.5",
     "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "flow-bin": "^0.100.0",
     "mocha": "^6.1.4",
