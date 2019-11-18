@@ -12,6 +12,7 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 app.use('/links', LinkRoutes);
 
+// eslint-disable-next-line no-console
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 export default app;
