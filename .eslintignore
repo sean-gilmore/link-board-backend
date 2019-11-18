@@ -1,0 +1,6 @@
+app/database.js
+app/knexfile.js
+app/migrations/*
+app/seeds/*
+dist/*
+
