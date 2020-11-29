@@ -1,4 +1,4 @@
-import Link from '../Link';
+import Link from '../Link.js';
 import { assert } from 'chai';
 
 describe('Link', function() {

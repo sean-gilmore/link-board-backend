@@ -1,7 +1,6 @@
 // @flow
-import Link from '../models/Link';
+import Link from '../models/Link.js';
 import { Link as LinkType } from '../types';
-
 
 class LinkController {
   static index(): Array<LinkType> {

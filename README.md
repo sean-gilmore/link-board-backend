@@ -9,10 +9,21 @@
 
 ## Pre-requisites
 
-- yarn
-- node
+- nvm
+- .env file with required config
+
+## Env file
+
+Ensure you have set up the required environment variables, as per the example
+`.envrc` file included in the project root.
 
 ## Commands
+
+Setup database:`yarn knex migrate:latest`
+
+Setup test database: `yarn knex migrate:latest --env test`
+
+Seed test database: `yarn knex seed:run --env test`
 
 Running development: `yarn start`
 
